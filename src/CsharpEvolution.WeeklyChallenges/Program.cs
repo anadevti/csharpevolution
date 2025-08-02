@@ -2,6 +2,7 @@
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsStructs;
 using CsharpEvolution.WeeklyChallenges.Weekly01.Tests_Types;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsOperadores;
+using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConstructors;
 
 namespace CsharpEvolution.WeeklyChallenges
 {
@@ -19,6 +20,13 @@ namespace CsharpEvolution.WeeklyChallenges
            
            Operators salaryCalculator = new Operators(5000.00m, 15, 8); // Instanciando a classe Operators para calcular o salário líquido
            salaryCalculator.CalculateNetSalary();
+           
+           // Tests contrutores
+           
+              Product product = new Product("Laptop", 1500.00, 10); // Instanciando a classe Product para testar os construtores
+              
+              var movie = new Movie("Batman", "Animação"); // Instanciando a classe Movie para testar os construtores
+              Console.WriteLine(movie.Title);
         }
     }
 }
