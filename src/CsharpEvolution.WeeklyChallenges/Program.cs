@@ -3,6 +3,7 @@ using CsharpEvolution.WeeklyChallenges.Weekly01.TestsStructs;
 using CsharpEvolution.WeeklyChallenges.Weekly01.Tests_Types;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsOperadores;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConstructors;
+using CsharpEvolution.WeeklyChallenges.Weekly01.TestsDestructors;
 
 namespace CsharpEvolution.WeeklyChallenges
 {
@@ -27,6 +28,9 @@ namespace CsharpEvolution.WeeklyChallenges
               
               var movie = new Movie("Batman", "Animação"); // Instanciando a classe Movie para testar os construtores
               Console.WriteLine(movie.Title);
+              
+              Users.DestructorExample destructorExample = new Users.DestructorExample(); // Instanciando a classe DestructorExample para testar os destrutores
+              destructorExample.ShowMessage(); // Exibindo o nome do usuário
         }
     }
 }
