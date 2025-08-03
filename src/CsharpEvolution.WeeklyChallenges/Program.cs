@@ -4,6 +4,7 @@ using CsharpEvolution.WeeklyChallenges.Weekly01.Tests_Types;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsOperadores;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConstructors;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsDestructors;
+using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConditionals;
 
 namespace CsharpEvolution.WeeklyChallenges
 {
@@ -22,7 +23,7 @@ namespace CsharpEvolution.WeeklyChallenges
            Operators salaryCalculator = new Operators(5000.00m, 15, 8); // Instanciando a classe Operators para calcular o salário líquido
            salaryCalculator.CalculateNetSalary();
            
-           // Tests contrutores
+            // Tests contrutores
            
               Product product = new Product("Laptop", 1500.00, 10); // Instanciando a classe Product para testar os construtores
               
@@ -31,6 +32,14 @@ namespace CsharpEvolution.WeeklyChallenges
               
               Users.DestructorExample destructorExample = new Users.DestructorExample(); // Instanciando a classe DestructorExample para testar os destrutores
               destructorExample.ShowMessage(); // Exibindo o nome do usuário
+            
+              // Tests conditionals:
+              
+                ConditionalSimple conditionalSimple = new ConditionalSimple(); // Instanciando a classe ConditionalSimple para testar os condicionais
+                conditionalSimple.CheckAge(); // Verificando a idade do usuário
+                conditionalSimple.CheckAge2(); // Verificando a idade do usuário com else
+                conditionalSimple.CheckAge3(); // Verificando a idade do usuário com else if
+                conditionalSimple.CheckAge4(); // Verificando a idade do usuário com switch
         }
     }
 }
