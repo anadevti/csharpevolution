@@ -6,7 +6,7 @@ using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConstructors;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsDestructors;
 using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConditionals;
 using CsharpEvolution.WeeklyChallenges.Weekly01.ChallengeWeekly01;
-
+using CsharpEvolution.WeeklyChallenges.Weekly01.ChallangeWeekly01_2x;
 namespace CsharpEvolution.WeeklyChallenges
 {
     class Program
@@ -43,12 +43,12 @@ namespace CsharpEvolution.WeeklyChallenges
            //      conditionalSimple.CheckAge4(); // Verificando a idade do usuário com switch
            
            // Tests ChallangeWeekly01:
-           var consoleView = new ConsoleView();
-           while (true)
-           {
-               consoleView.ShowMenu();
-               consoleView.Run();
-           }
+           // var consoleView = new ConsoleView();
+           // while (true)
+           // {
+           //     consoleView.ShowMenu();
+           //     consoleView.Run();
+           // }
            
         }
     }
