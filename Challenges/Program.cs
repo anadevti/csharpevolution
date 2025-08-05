@@ -43,5 +43,7 @@ class Program
         EnterpriseFinance enterpriseFinance = new EnterpriseFinance();
         EnterpriseRh enterpriseRh = new EnterpriseRh();
         Console.WriteLine($"Teste instanciacao");
+        enterpriseFinance.TestMethodFinance();
+        enterpriseRh.TestMethodRh();
     }
 }
