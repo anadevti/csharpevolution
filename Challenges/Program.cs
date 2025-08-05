@@ -36,6 +36,25 @@ namespace Enterprise.rh
     }
 }
 
+class Car
+{
+    public string Mark;
+    public string Model;
+    public int Year;
+
+    public Car(string mark, string model, int year)
+    {
+        Mark = mark;
+        Model = model;
+        Year = year;
+    }
+    
+    public void TestCar()
+    {
+        Console.WriteLine($"Carro da marca: {Mark} Modelo da marca: {Model} ano: {Year}");
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
@@ -45,5 +64,7 @@ class Program
         Console.WriteLine($"Teste instanciacao");
         enterpriseFinance.TestMethodFinance();
         enterpriseRh.TestMethodRh();
+        Car car = new Car("Volks", "Gol", 2005);
+        car.TestCar();
     }
 }
