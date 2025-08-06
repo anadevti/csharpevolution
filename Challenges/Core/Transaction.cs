@@ -6,16 +6,16 @@ public struct Transaction
 {
     public decimal Amount { get; }
     public DateTime Date { get; }
-    //public TransactionType Type { get; }
-    //public BudgetCategory Category { get; }
+    public TransactionTypeEnum TransactionType { get; }
+    public CategoryEnum Category { get; }
     public string Description { get; }
 
-    public Transaction(decimal amount, DateTime date, string description)
+    public Transaction(decimal amount, DateTime date, string description, TransactionTypeEnum transactiontype, CategoryEnum category)
     {
         Amount = amount;
         Date = date;
-       // Type = type;
-       // Category = category;
+        TransactionType = transactiontype;
+        Category = category;
         Description = description;
     }
 }
