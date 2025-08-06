@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.Collections.Specialized;
+using System.Reflection;
+using System.Security.Cryptography;
 using EnterpriseFinance = Enterprise.finance.Relatory;
 using EnterpriseRh = Enterprise.rh.Relatory;
 
@@ -55,16 +57,59 @@ class Car
     }
 }
 
-class Program
+
+struct Product
 {
-    static void Main(string[] args)
+    public string Name;
+    public decimal Price;
+    public string Category;
+
+    public Product(string name, decimal price, String category)
     {
-        EnterpriseFinance enterpriseFinance = new EnterpriseFinance();
-        EnterpriseRh enterpriseRh = new EnterpriseRh();
-        Console.WriteLine($"Teste instanciacao");
-        enterpriseFinance.TestMethodFinance();
-        enterpriseRh.TestMethodRh();
-        Car car = new Car("Volks", "Gol", 2005);
-        car.TestCar();
+        Name = name;
+        Price = price;
+        Category = category;
+    } 
+
+    List<Product> listProducts = new List<Product>()
+    {
+        new Product("BMW", 100m, "BMW"),
+        new Product("Audi", 200m, "Audi"),
+        new Product("Honda", 300m, "Honda")
+    };
+    public void AddProduct(Product product)
+    {
+        listProducts.Add(product);
+    }
+
+    public void RemoveProduct(Product product)
+    {
+        listProducts.Remove(product);
+    }
+
+    public void CalculatePrice()
+    {
+        foreach (var media in listProducts)
+        {
+            var mediaPrice = media.Price;
+            mediaPrice = mediaPrice + listProducts.Count;
+        }
+        
+        
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            EnterpriseFinance enterpriseFinance = new EnterpriseFinance();
+            EnterpriseRh enterpriseRh = new EnterpriseRh();
+            Console.WriteLine($"Teste instanciacao");
+            enterpriseFinance.TestMethodFinance();
+            enterpriseRh.TestMethodRh();
+            Car car = new Car("Volks", "Gol", 2005);
+            car.TestCar();
+        }
     }
 }
