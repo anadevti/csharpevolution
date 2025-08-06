@@ -8,7 +8,11 @@ using Challenges.Core;
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Teste instanciacao");
+            Account account = new Account(100);
+            account.PersonName = "Aninha";
+            account.Deposit(amount:200);
+            account.ShowDetailsBalance();
+            //Console.WriteLine($"Teste instanciacao");
         }
         
     }

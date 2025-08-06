@@ -2,8 +2,10 @@
 
 public class Account
 {
+    public string PersonName;
+    
     // Saldo inicial definido na criação, imutável após inicialização.
-    public decimal InitialBalance { get; }
+    public decimal InitialBalance;
 
     // Saldo atual alterável somente dentro da classe, seguro contra alterações indevidas externas.
     public decimal ActualBalance { get; private set; }
@@ -16,9 +18,14 @@ public class Account
     }
 
     // Método para atualizar saldo após transações.
-    public void UpdateBalance(decimal amount)
+    public void Deposit(decimal amount)
     {
-        ActualBalance += amount;
+        InitialBalance += amount;
+    }
+
+    public void ShowDetailsBalance()
+    {
+        Console.WriteLine($"O Usuario {PersonName} possui um saldo de {InitialBalance:C2}");
     }
     
 }
