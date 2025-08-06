@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 using System.Reflection;
 using System.Security.Cryptography;
+using Challenges.Core;
 
     class Program
     {
@@ -9,4 +10,5 @@ using System.Security.Cryptography;
         {
             Console.WriteLine($"Teste instanciacao");
         }
+        
     }
