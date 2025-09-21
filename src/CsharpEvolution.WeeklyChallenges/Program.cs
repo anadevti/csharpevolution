@@ -9,6 +9,7 @@ using CsharpEvolution.WeeklyChallenges.Weekly01.TestsConditionals;
 using CsharpEvolution.WeeklyChallenges.Weekly01.ChallengeWeekly01;
 using CsharpEvolution.WeeklyChallenges.Weekly01.ChallangeWeekly01_2x;
 using CsharpEvolution.WeeklyChallenges.Weekly02.Exceptions_Tests;
+using CsharpEvolution.WeeklyChallenges.Weekly03;
 
 namespace CsharpEvolution.WeeklyChallenges
 {
@@ -16,8 +17,9 @@ namespace CsharpEvolution.WeeklyChallenges
     {
         static void Main(string[] args)
         {
-            Exceptions exceptions = new Exceptions();
-            exceptions.Convert_Int();
+            TestStringReader testStringReader = new TestStringReader();
+            testStringReader.Path = @"C:\Users\aninha\Documents\aws-palestra";
+            testStringReader.ProcessDirectory();
         }
     }
 }
